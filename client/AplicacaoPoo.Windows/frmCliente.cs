@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AplicacaoPoo.Dominio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,11 @@ namespace AplicacaoPoo.Windows
         public frmCliente()
         {
             InitializeComponent();
+            var cliente = new Cliente();
+            cliente.Nome = "Jean Bezerra";
+            txtClienteNome.Text = cliente.Nome;
         }
+            
+        
     }
 }
