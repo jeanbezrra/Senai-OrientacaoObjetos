@@ -7,9 +7,9 @@ namespace AplicacaoPoo.Estrutural.Windows
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnCotacao_Click(object sender, EventArgs e)
         {
-
+        
         }
     }
 }
