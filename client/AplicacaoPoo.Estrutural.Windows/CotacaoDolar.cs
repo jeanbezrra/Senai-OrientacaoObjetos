@@ -18,7 +18,11 @@ namespace AplicacaoPoo.Estrutural.Windows
         }
         private void btnConverter_Click(object sender, EventArgs e)
         {
-
+            var vValorhj = decimal.Parse(txtVdolarHoje.Text);
+            var vConversao = decimal.Parse(txtVconversao.Text);
+            var resultado = vValorhj * vConversao;
+            MessageBox.Show($"Valor é { resultado.ToString}");        
+            
         }
     }
 }
