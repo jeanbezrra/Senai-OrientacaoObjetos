@@ -21,7 +21,7 @@ namespace AplicacaoPoo.Estrutural.Windows
             var vValorhj = decimal.Parse(txtVdolarHoje.Text);
             var vConversao = decimal.Parse(txtVconversao.Text);
             var resultado = vValorhj * vConversao;
-            MessageBox.Show($"Valor é { resultado.ToString}");        
+            MessageBox.Show($"Valor é { resultado.ToString()}");        
             
         }
     }
