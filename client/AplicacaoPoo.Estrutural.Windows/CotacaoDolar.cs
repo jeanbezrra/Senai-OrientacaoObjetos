@@ -16,5 +16,30 @@ namespace AplicacaoPoo.Estrutural.Windows
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CotacaoDolar_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void vDolarHoje_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnConverter_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
