@@ -41,7 +41,6 @@
             this.txtVdolarHoje.Name = "txtVdolarHoje";
             this.txtVdolarHoje.Size = new System.Drawing.Size(100, 23);
             this.txtVdolarHoje.TabIndex = 0;
-            this.txtVdolarHoje.TextChanged += new System.EventHandler(this.vDolarHoje_TextChanged);
             // 
             // label1
             // 
@@ -54,7 +53,6 @@
             this.label1.Size = new System.Drawing.Size(195, 23);
             this.label1.TabIndex = 1;
             this.label1.Text = "Valor do Dolar hoje:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtVconversao
             // 
@@ -62,7 +60,6 @@
             this.txtVconversao.Name = "txtVconversao";
             this.txtVconversao.Size = new System.Drawing.Size(100, 23);
             this.txtVconversao.TabIndex = 2;
-            this.txtVconversao.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2
             // 
@@ -102,7 +99,6 @@
             this.Controls.Add(this.txtVdolarHoje);
             this.Name = "CotacaoDolar";
             this.Text = "CotacaoDolar";
-            this.Load += new System.EventHandler(this.CotacaoDolar_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
