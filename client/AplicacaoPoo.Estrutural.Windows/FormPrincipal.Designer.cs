@@ -34,7 +34,7 @@
             // 
             // btnCotacao
             // 
-            this.btnCotacao.BackColor = System.Drawing.Color.Indigo;
+            this.btnCotacao.BackColor = System.Drawing.Color.MidnightBlue;
             this.btnCotacao.Font = new System.Drawing.Font("GothicG", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCotacao.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnCotacao.Location = new System.Drawing.Point(190, 231);
@@ -47,7 +47,7 @@
             // 
             // btnComissao
             // 
-            this.btnComissao.BackColor = System.Drawing.Color.Fuchsia;
+            this.btnComissao.BackColor = System.Drawing.Color.MidnightBlue;
             this.btnComissao.Font = new System.Drawing.Font("GothicG", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnComissao.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnComissao.Location = new System.Drawing.Point(27, 35);
@@ -56,12 +56,13 @@
             this.btnComissao.TabIndex = 1;
             this.btnComissao.Text = "Comissão";
             this.btnComissao.UseVisualStyleBackColor = false;
+            this.btnComissao.Click += new System.EventHandler(this.btnComissao_Click);
             // 
             // btn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.GreenYellow;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(418, 334);
             this.Controls.Add(this.btnComissao);
             this.Controls.Add(this.btnCotacao);

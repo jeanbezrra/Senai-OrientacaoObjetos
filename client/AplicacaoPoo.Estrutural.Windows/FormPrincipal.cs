@@ -2,6 +2,7 @@ namespace AplicacaoPoo.Estrutural.Windows
 {
     public partial class btn : Form
     {
+
         public btn()
         {
             InitializeComponent();
@@ -13,5 +14,10 @@ namespace AplicacaoPoo.Estrutural.Windows
             form.Show();
         }
 
+        private void btnComissao_Click(object sender, EventArgs e)
+        {
+            var form = new Comissao();
+            form.Show();
+        }
     }
 }

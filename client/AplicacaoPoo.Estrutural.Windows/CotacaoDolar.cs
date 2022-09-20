@@ -12,6 +12,8 @@ namespace AplicacaoPoo.Estrutural.Windows
 {
     public partial class CotacaoDolar : Form
     {
+        private bool CotacaoEhValido;
+        private bool ValorEmDolarEhValido;
         public CotacaoDolar()
         {
             InitializeComponent();
@@ -19,9 +21,20 @@ namespace AplicacaoPoo.Estrutural.Windows
         }
         private void btnConverter_Click(object sender, EventArgs e)
         {
+            try
+            { var resultado = decimal.Parse(txtVdolarHoje.Text);
+                CotacaoEhValido = true;
+                if (ValorEmDolarEhValido && CotacaoEhValido)
+                {
+                    btnConverter.Enabled = true;
+                }
+            }
+            catch(Exception)
+
             var vValorhj = decimal.Parse(txtVdolarHoje.Text);
             var vConversao = decimal.Parse(txtVconversao.Text);
             var resultado = vValorhj * vConversao;
+
             MessageBox.Show($"Valor é { resultado.ToString()}");        
             
         }
