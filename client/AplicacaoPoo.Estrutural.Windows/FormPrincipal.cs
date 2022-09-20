@@ -9,7 +9,8 @@ namespace AplicacaoPoo.Estrutural.Windows
 
         private void btnCotacao_Click(object sender, EventArgs e)
         {
-        
+            var form = new CotacaoDolar();
+            form.Show();
         }
 
     }

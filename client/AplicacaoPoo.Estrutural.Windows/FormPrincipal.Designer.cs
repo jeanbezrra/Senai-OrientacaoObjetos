@@ -43,6 +43,7 @@
             this.btnCotacao.TabIndex = 0;
             this.btnCotacao.Text = "Cotação";
             this.btnCotacao.UseVisualStyleBackColor = false;
+            this.btnCotacao.Click += new System.EventHandler(this.btnCotacao_Click);
             // 
             // btnComissao
             // 

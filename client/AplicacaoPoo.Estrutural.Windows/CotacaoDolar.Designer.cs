@@ -39,7 +39,8 @@
             // 
             this.txtVdolarHoje.Location = new System.Drawing.Point(43, 85);
             this.txtVdolarHoje.Name = "txtVdolarHoje";
-            this.txtVdolarHoje.Size = new System.Drawing.Size(100, 23);
+            this.txtVdolarHoje.PlaceholderText = "Cotação do dólar";
+            this.txtVdolarHoje.Size = new System.Drawing.Size(140, 23);
             this.txtVdolarHoje.TabIndex = 0;
             // 
             // label1
@@ -58,7 +59,8 @@
             // 
             this.txtVconversao.Location = new System.Drawing.Point(43, 169);
             this.txtVconversao.Name = "txtVconversao";
-            this.txtVconversao.Size = new System.Drawing.Size(100, 23);
+            this.txtVconversao.PlaceholderText = "Informe o valor em dólar";
+            this.txtVconversao.Size = new System.Drawing.Size(140, 23);
             this.txtVconversao.TabIndex = 2;
             // 
             // label2

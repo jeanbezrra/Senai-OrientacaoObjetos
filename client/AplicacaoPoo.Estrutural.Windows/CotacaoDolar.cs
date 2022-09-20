@@ -15,6 +15,7 @@ namespace AplicacaoPoo.Estrutural.Windows
         public CotacaoDolar()
         {
             InitializeComponent();
+            btnConverter.Enabled = false;
         }
         private void btnConverter_Click(object sender, EventArgs e)
         {
