@@ -1,6 +1,6 @@
 ﻿namespace AplicacaoPoo.Estrutural.Windows
 {
-    partial class Comissao
+    partial class frmComissionamento
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // Comissao
+            // frmComissionamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(335, 307);
-            this.Name = "Comissao";
-            this.Text = "Comissao";
+            this.ClientSize = new System.Drawing.Size(591, 338);
+            this.Name = "frmComissionamento";
+            this.Text = "frmComissionamento";
             this.ResumeLayout(false);
 
         }

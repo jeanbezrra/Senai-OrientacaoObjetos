@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AplicacaoPoo.Dominio.services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,65 +11,45 @@ using System.Windows.Forms;
 
 namespace AplicacaoPoo.Estrutural.Windows
 {
-    public partial class CotacaoDolar : Form
+    public partial class frmConversorMoeda : Form
     {
-        private bool CotacaoEhValido;
-        private bool ValorEmDolarEhValido;
-        public CotacaoDolar()
+        public frmConversorMoeda()
         {
             InitializeComponent();
-            HabilitarOuDesabilitarBotaoCalcularConversao();
+            btnConverterEmReal.Enabled = false;
         }
-        private void btnConverter_Click(object sender, EventArgs e)
-        {
-            var valorAtualDolar = decimal.Parse(txtVdolarHoje.Text);
-            var valorEmDolar = decimal.Parse(txtVconversao.Text);
 
-            var resultado = valorEmDolar * valorAtualDolar;
-            MessageBox.Show($"Valor em Reais: {resultado.ToString("C")}");
+        private void btnConverterEmReal_Click(object sender, EventArgs e)
+        {
+            var valorEmDolar = decimal.Parse(txtValorEmDolar.Text);
+
+            var moeda = new ConverterMoedaService();
+            var resultado = moeda.ConverterDolarEmReal(valorEmDolar);
+
+            //string interpolation
+            MessageBox.Show($"Valor convertido é: {resultado} reais");
         }
-        private void txtDolarHoje_TextChanged(object sender, EventArgs e)
+
+
+        private void txtValorEmDolar_TextChanged(object sender, EventArgs e)
         {
             try
             {
-                var resultado = decimal.Parse(txtVdolarHoje.Text);
-                CotacaoEhValido = true;
-                HabilitarOuDesabilitarBotaoCalcularConversao();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("A cotação do dolar é um valor decimal");
-                txtVdolarHoje.Focus();
-                CotacaoEhValido = false;
-                HabilitarOuDesabilitarBotaoCalcularConversao();
-            }
-        }
+                if (txtValorEmDolar.Text == "")
+                {
+                    btnConverterEmReal.Enabled = false
+                        ;
+                    return;
+                };
 
-        private void txtVconversao_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                var resultado = decimal.Parse(txtVconversao.Text);
-                ValorEmDolarEhValido = true;
-                HabilitarOuDesabilitarBotaoCalcularConversao();
+                var resultado = decimal.Parse(txtValorEmDolar.Text);
+                btnConverterEmReal.Enabled = true;
             }
             catch (Exception)
             {
-                MessageBox.Show("A cotação do dolar é um valor decimal");
-                txtVconversao.Focus();
-                ValorEmDolarEhValido = false;
-                HabilitarOuDesabilitarBotaoCalcularConversao();
-            }
-        }
-        private void HabilitarOuDesabilitarBotaoCalcularConversao()
-        {
-            if (ValorEmDolarEhValido && CotacaoEhValido)
-            {
-                btnConverter.Enabled = true;
-            }
-            else
-            {
-                btnConverter.Enabled = false;
+                MessageBox.Show("A cotação do dalor é um valor decimal");
+                txtValorEmDolar.Focus();
+                btnConverterEmReal.Enabled = false;
             }
         }
     }

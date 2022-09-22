@@ -1,22 +1,31 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
 namespace AplicacaoPoo.Estrutural.Windows
 {
-    public partial class btn : Form
+    public partial class frmPrincipal : Form
     {
-
-        public btn()
+        public frmPrincipal()
         {
             InitializeComponent();
         }
 
-        private void btnCotacao_Click(object sender, EventArgs e)
+        private void btnAbrirFormConversorMoedas_Click(object sender, EventArgs e)
         {
-            var form = new CotacaoDolar();
+            var form = new frmConversorMoeda();
             form.Show();
         }
 
-        private void btnComissao_Click(object sender, EventArgs e)
+        private void btnAbrirFormComissionamento_Click(object sender, EventArgs e)
         {
-            var form = new Comissao();
+            var form = new frmComissionamento();
             form.Show();
         }
     }
