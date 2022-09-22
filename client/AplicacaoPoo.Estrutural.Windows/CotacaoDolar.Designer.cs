@@ -38,12 +38,11 @@
             // txtVdolarHoje
             // 
             this.txtVdolarHoje.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(2)))));
-            this.txtVdolarHoje.Location = new System.Drawing.Point(23, 76);
+            this.txtVdolarHoje.Location = new System.Drawing.Point(43, 85);
             this.txtVdolarHoje.Name = "txtVdolarHoje";
             this.txtVdolarHoje.PlaceholderText = "Cotação do dólar";
             this.txtVdolarHoje.Size = new System.Drawing.Size(140, 23);
             this.txtVdolarHoje.TabIndex = 0;
-            this.txtVdolarHoje.TextChanged += new System.EventHandler(this.txtDolarHoje_TextChanged);
             // 
             // label1
             // 
@@ -59,12 +58,11 @@
             // 
             // txtVconversao
             // 
-            this.txtVconversao.Location = new System.Drawing.Point(23, 154);
+            this.txtVconversao.Location = new System.Drawing.Point(43, 169);
             this.txtVconversao.Name = "txtVconversao";
             this.txtVconversao.PlaceholderText = "Informe o valor em dólar";
             this.txtVconversao.Size = new System.Drawing.Size(140, 23);
             this.txtVconversao.TabIndex = 2;
-            this.txtVconversao.TextChanged += new System.EventHandler(this.txtVconversao_TextChanged);
             // 
             // label2
             // 
@@ -95,7 +93,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(393, 321);
             this.Controls.Add(this.btnConverter);
             this.Controls.Add(this.label2);

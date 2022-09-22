@@ -17,59 +17,26 @@ namespace AplicacaoPoo.Estrutural.Windows
         public CotacaoDolar()
         {
             InitializeComponent();
-            HabilitarOuDesabilitarBotaoCalcularConversao();
+            btnConverter.Enabled = false;
         }
         private void btnConverter_Click(object sender, EventArgs e)
         {
-            var valorAtualDolar = decimal.Parse(txtVdolarHoje.Text);
-            var valorEmDolar = decimal.Parse(txtVconversao.Text);
-
-            var resultado = valorEmDolar * valorAtualDolar;
-            MessageBox.Show($"Valor em Reais: {resultado.ToString("C")}");
-        }
-        private void txtDolarHoje_TextChanged(object sender, EventArgs e)
-        {
             try
-            {
-                var resultado = decimal.Parse(txtVdolarHoje.Text);
+            { var resultado = decimal.Parse(txtVdolarHoje.Text);
                 CotacaoEhValido = true;
-                HabilitarOuDesabilitarBotaoCalcularConversao();
+                if (ValorEmDolarEhValido && CotacaoEhValido)
+                {
+                    btnConverter.Enabled = true;
+                }
             }
-            catch (Exception)
-            {
-                MessageBox.Show("A cotação do dolar é um valor decimal");
-                txtVdolarHoje.Focus();
-                CotacaoEhValido = false;
-                HabilitarOuDesabilitarBotaoCalcularConversao();
-            }
-        }
+            catch(Exception)
 
-        private void txtVconversao_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                var resultado = decimal.Parse(txtVconversao.Text);
-                ValorEmDolarEhValido = true;
-                HabilitarOuDesabilitarBotaoCalcularConversao();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("A cotação do dolar é um valor decimal");
-                txtVconversao.Focus();
-                ValorEmDolarEhValido = false;
-                HabilitarOuDesabilitarBotaoCalcularConversao();
-            }
-        }
-        private void HabilitarOuDesabilitarBotaoCalcularConversao()
-        {
-            if (ValorEmDolarEhValido && CotacaoEhValido)
-            {
-                btnConverter.Enabled = true;
-            }
-            else
-            {
-                btnConverter.Enabled = false;
-            }
+            var vValorhj = decimal.Parse(txtVdolarHoje.Text);
+            var vConversao = decimal.Parse(txtVconversao.Text);
+            var resultado = vValorhj * vConversao;
+
+            MessageBox.Show($"Valor é { resultado.ToString()}");        
+            
         }
     }
 }
