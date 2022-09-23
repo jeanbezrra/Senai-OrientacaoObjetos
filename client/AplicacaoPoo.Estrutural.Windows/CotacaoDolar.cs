@@ -1,4 +1,5 @@
-﻿using AplicacaoPoo.Dominio.services;
+﻿using AplicacaoPoo.Dominio.Helpers;
+using AplicacaoPoo.Dominio.services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,41 +17,45 @@ namespace AplicacaoPoo.Estrutural.Windows
         public frmConversorMoeda()
         {
             InitializeComponent();
-            btnConverterEmReal.Enabled = false;
+            lblPrimeiroValor.Text = $"1 {MoedaHelper.Dólar} igual a";
+            lblSegundoValor.Text = $"5,12  {MoedaHelper.Real}";
         }
 
-        private void btnConverterEmReal_Click(object sender, EventArgs e)
-        {
-            var valorEmDolar = decimal.Parse(txtValorEmDolar.Text);
-
-            var moeda = new ConverterMoedaService();
-            var resultado = moeda.ConverterDolarEmReal(valorEmDolar);
-
-            //string interpolation
-            MessageBox.Show($"Valor convertido é: {resultado} reais");
-        }
+        
 
 
         private void txtValorEmDolar_TextChanged(object sender, EventArgs e)
         {
             try
             {
-                if (txtValorEmDolar.Text == "")
-                {
-                    btnConverterEmReal.Enabled = false
-                        ;
-                    return;
-                };
+                if (txtValorEmDolar.Text == "") return;
 
-                var resultado = decimal.Parse(txtValorEmDolar.Text);
-                btnConverterEmReal.Enabled = true;
+               
+                    var valorEmDolar = decimal.Parse(txtValorEmDolar.Text);
+
+                    var moeda = new ConverterMoedaService();
+                    var resultado = moeda.ConverterDolarEmReal(valorEmDolar);
+                    lblPrimeiroValor.Text = $"{valorEmDolar} {MoedaHelper.Dólar} igual a";
+                    lblSegundoValor.Text = $"{resultado} {MoedaHelper.Real}";
+                
             }
             catch (Exception)
             {
-                MessageBox.Show("A cotação do dalor é um valor decimal");
+                MessageBox.Show("A cotação do valor é um valor decimal");
                 txtValorEmDolar.Focus();
-                btnConverterEmReal.Enabled = false;
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            decimal CotacaoDolar = 5.12m;
+            decimal CotacaoLibra = 6.15m;
+            decimal CotacaoEuro = 6.0m;
         }
     }
 }
