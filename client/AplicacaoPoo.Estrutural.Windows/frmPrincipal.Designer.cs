@@ -56,9 +56,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(368, 161);
+            this.ClientSize = new System.Drawing.Size(517, 332);
             this.Controls.Add(this.btnAbrirFormComissionamento);
             this.Controls.Add(this.btnAbrirFormConversorMoedas);
+            this.IsMdiContainer = true;
             this.Name = "frmPrincipal";
             this.Text = "frmPrincipal";
             this.ResumeLayout(false);

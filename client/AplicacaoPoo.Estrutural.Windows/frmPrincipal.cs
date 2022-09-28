@@ -12,10 +12,6 @@ namespace AplicacaoPoo.Estrutural.Windows
 {
     public partial class frmPrincipal : Form
     {
-        public frmPrincipal()
-        {
-            InitializeComponent();
-        }
 
         private void btnAbrirFormConversorMoedas_Click(object sender, EventArgs e)
         {

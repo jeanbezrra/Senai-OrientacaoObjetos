@@ -36,15 +36,16 @@
             // 
             // txtValorEmDolar
             // 
-            this.txtValorEmDolar.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.txtValorEmDolar.BackColor = System.Drawing.Color.White;
             this.txtValorEmDolar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtValorEmDolar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtValorEmDolar.ForeColor = System.Drawing.Color.Gold;
+            this.txtValorEmDolar.ForeColor = System.Drawing.Color.Black;
             this.txtValorEmDolar.Location = new System.Drawing.Point(18, 96);
             this.txtValorEmDolar.Name = "txtValorEmDolar";
             this.txtValorEmDolar.PlaceholderText = "informe o valor em dolar";
             this.txtValorEmDolar.Size = new System.Drawing.Size(173, 29);
             this.txtValorEmDolar.TabIndex = 1;
+            this.txtValorEmDolar.Text = "8";
             this.txtValorEmDolar.TextChanged += new System.EventHandler(this.txtValorEmDolar_TextChanged);
             // 
             // lblPrimeiroValor
@@ -67,9 +68,10 @@
             // 
             // cmbMoedas
             // 
-            this.cmbMoedas.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.cmbMoedas.BackColor = System.Drawing.SystemColors.Menu;
+            this.cmbMoedas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMoedas.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cmbMoedas.ForeColor = System.Drawing.Color.Gold;
+            this.cmbMoedas.ForeColor = System.Drawing.Color.Black;
             this.cmbMoedas.FormattingEnabled = true;
             this.cmbMoedas.Items.AddRange(new object[] {
             "Dolar",
@@ -79,7 +81,7 @@
             this.cmbMoedas.Name = "cmbMoedas";
             this.cmbMoedas.Size = new System.Drawing.Size(162, 29);
             this.cmbMoedas.TabIndex = 5;
-            this.cmbMoedas.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.cmbMoedas.SelectedIndexChanged += new System.EventHandler(this.cmbMoedas_SelectedIndexChanged);
             // 
             // frmConversorMoeda
             // 
@@ -94,6 +96,7 @@
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "frmConversorMoeda";
             this.Text = "frmConversorMoeda";
+            this.TransparencyKey = System.Drawing.Color.WhiteSmoke;
             this.ResumeLayout(false);
             this.PerformLayout();
 

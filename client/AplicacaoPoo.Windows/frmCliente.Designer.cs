@@ -1,6 +1,6 @@
 ﻿namespace AplicacaoPoo.Windows
 {
-    partial class frmCliente
+    partial class frmConversorMoeda
     {
         /// <summary>
         /// Required designer variable.
