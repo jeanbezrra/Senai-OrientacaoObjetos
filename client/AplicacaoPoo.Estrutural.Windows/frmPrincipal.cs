@@ -12,6 +12,10 @@ namespace AplicacaoPoo.Estrutural.Windows
 {
     public partial class frmPrincipal : Form
     {
+        public frmPrincipal()
+        {
+            InitializeComponent();
+        }
 
         private void btnAbrirFormConversorMoedas_Click(object sender, EventArgs e)
         {
@@ -22,6 +26,13 @@ namespace AplicacaoPoo.Estrutural.Windows
         private void btnAbrirFormComissionamento_Click(object sender, EventArgs e)
         {
             var form = new frmComissionamento();
+            form.Show();
+        }
+
+        private void conversorDeMoedasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new frmConversorMoeda();
+            form.MdiParent = this;
             form.Show();
         }
     }
