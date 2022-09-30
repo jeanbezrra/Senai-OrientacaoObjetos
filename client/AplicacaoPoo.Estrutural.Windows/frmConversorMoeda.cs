@@ -40,9 +40,9 @@ namespace AplicacaoPoo.Estrutural.Windows
         {
             EfetuarConversaoMoeda();
         } 
-
+         
         private void EfetuarConversaoMoeda()
-        #region MEU PROGRAMA
+        //#region MEU PROGRAMA
         //Atalho para comentar código CTRL + K + C
         //Atalho para descomentar o código CTRL + K + U
 
@@ -84,11 +84,11 @@ namespace AplicacaoPoo.Estrutural.Windows
                     default:
                         break;
                 }
-                #endregion
+                //#endregion
 
-                #region PROGRAMA TOP DAS GALAXIA DO PROFESSOR
+                //#region PROGRAMA TOP DAS GALAXIA DO PROFESSOR
 
-                #endregion
+                //#endregion
             }
             catch (Exception)
             {
